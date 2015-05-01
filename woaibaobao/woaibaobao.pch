@@ -1,0 +1,98 @@
+//
+//  woaibaobao.pch
+//  woaibaobao
+//
+//  Created by 梁建 on 14/10/18.
+//  Copyright (c) 2014年 梁建. All rights reserved.
+//
+
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
+#import <Foundation/Foundation.h>
+#import "XMPPFramework.h"
+#import "Global.h"
+#endif
+
+
+
+
+
+
+
+
+
+
+//#ifndef woaibaobao_woaibaobao_pch
+//#define woaibaobao_woaibaobao_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define HostName                    @"60.217.228.49"
+#define HostPort                    @"28888"
+#define ServerUrl                   @"http://y.hightend.com/ichat/cgi/"
+#define SendMessage                 @"message_send.action"
+#define GetFriendList               @"friend_list.action"
+#define AddFriend                   @"friend_add.action"
+#define CreateGroup                 @"group_create.action"
+#define GroupList                   @"group_list.action"
+#define AddGroupMember              @"groupMember_add.action"
+#define GroupMember_list            @"groupMember_list.action"
+#define UserDetailed                @"user_detailed.action"
+#define removeGroupMember           @"groupMember_remove.action"
+#define ModifyPassword              @"user_modifyPassword.action"
+#define ModifyUserInfo              @"user_modify.action"
+#define DeleteFriendAction          @"friend_deleate.action"
+#define UserRegister                @"user_register.action"
+#define ScreenHeight [UIScreen mainScreen].bounds.size.height
+
+//获取设备的物理宽度
+#define ScreenWidth [UIScreen mainScreen].bounds.size.width
+//判断版本
+#define IOS7 [[[UIDevice currentDevice]systemVersion] floatValue] >= 7.0
+// 获取document文件的相对路径
+#define documentPath() [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0]
+
+#define getFont(label) [UIFont fontWithName:label.font.fontName size:label.font.pointSize]
+
+//获取文字的高度
+#define getTxtHeight(txt, label) [txt sizeWithFont:getFont(label) constrainedToSize:CGSizeMake(label.frame.size.width, CGFLOAT_MAX)].height
+
+//获取文字宽度
+#define getTxtWidth(txt, label) [txt sizeWithFont:getFont(label) constrainedToSize:CGSizeMake(CGFLOAT_MAX, label.frame.size.height)].width
+
+
+
+#pragma mark-从shiku_im************************中改进的东西
+
+
+
+#define kXMPPHost @"www.aiktv.co"//主机名
+#define API_BASE_URL(_URL_) [NSURL URLWithString:[@"http://www.aiktv.co:8080/skapi/v2/" stringByAppendingString:_URL_]] //接口的基础地址
+
+#define kXMPP_Domain @"www.aiktv.co" //OpenFire配置的IM服务器名
+
+#define kMY_USER_ID @"myUserId"
+#define kMY_USER_PASSWORD @"myUserPassword"
+#define kMY_USER_NICKNAME @"myUserNickname"
+#define kMY_USER_Head @"myUserHead"
+#define kMY_USER_LoginName @"myUserLoginName"
+#define kXMPPNewMsgNotifaction    @"xmppNewMsgNotifaction"
+#define kXMPPNewFriendNotifaction @"xmppNewFriendNotifaction"
+#define kLoginNotifaction         @"kLoginNotifaction"
+
+#pragma mark*********************************************
+
+#define DEGREES_TO_RADIANS(angle) ((angle)/180.0 *M_PI)
+#define RADIANS_TO_DEGREES(radians) ((radians)*(180.0/M_PI))
+
+#define XMPP_HOST_NAME @"liangjiandemacbook-air.local"
+#define XMPP_MUC_SERVICE @"conference.liangjiandemacbook-air.local"

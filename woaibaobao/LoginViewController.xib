@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController">
+            <connections>
+                <outlet property="PassWord" destination="QyN-1d-Hhf" id="x6R-9S-Kli"/>
+                <outlet property="Username" destination="SlO-uB-1SH" id="EXM-9L-oZV"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dl_bj.png" translatesAutoresizingMaskIntoConstraints="NO" id="7ha-80-5cK">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dl_tx.png" translatesAutoresizingMaskIntoConstraints="NO" id="fce-qZ-loH">
+                    <rect key="frame" x="110" y="67" width="98" height="98"/>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="请输入手机号码" minimumFontSize="17" background="dl_b.png" translatesAutoresizingMaskIntoConstraints="NO" id="SlO-uB-1SH">
+                    <rect key="frame" x="40" y="225" width="249" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="cnw-Gq-pHq"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="请输入密码" minimumFontSize="17" background="dl_a.png" translatesAutoresizingMaskIntoConstraints="NO" id="QyN-1d-Hhf">
+                    <rect key="frame" x="40" y="267" width="249" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="z5T-dh-8L4"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mL0-Uk-tOy">
+                    <rect key="frame" x="40" y="316" width="249" height="35"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                    <state key="normal" title="登录" backgroundImage="dl_btn2.png"/>
+                    <connections>
+                        <action selector="Login:" destination="-1" eventType="touchUpInside" id="o48-sZ-nJB"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login_avatar_bg.9.png" translatesAutoresizingMaskIntoConstraints="NO" id="3dX-4c-z8q">
+                    <rect key="frame" x="-5" y="188" width="311" height="193"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uzf-LV-naK">
+                    <rect key="frame" x="105" y="515" width="110" height="34"/>
+                    <state key="normal" title="Button" image="login_register_btn_bg.9.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="RegisterAction:" destination="-1" eventType="touchUpInside" id="B0w-fY-i8U"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="-715" y="147"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="dl_a.png" width="518" height="73"/>
+        <image name="dl_b.png" width="518" height="73"/>
+        <image name="dl_bj.png" width="720" height="1147"/>
+        <image name="dl_btn2.png" width="518" height="73"/>
+        <image name="dl_tx.png" width="192" height="192"/>
+        <image name="login_avatar_bg.9.png" width="134" height="134"/>
+        <image name="login_register_btn_bg.9.png" width="136" height="56"/>
+    </resources>
+</document>
